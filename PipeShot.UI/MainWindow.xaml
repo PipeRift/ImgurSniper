@@ -1,0 +1,124 @@
+﻿<Window x:Class="PipeShot.UI.MainWindow"
+		xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+		xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+		xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+		xmlns:md="http://materialdesigninxaml.net/winfx/xaml/themes"
+		xmlns:toasty="clr-namespace:Toast;assembly=Toast"
+		xmlns:cultureStrings="clr-namespace:PipeShot.UI.Properties"
+		xmlns:dragablz="http://dragablz.net/winfx/xaml/dragablz"
+		mc:Ignorable="d" MinHeight="430" MinWidth="450"
+		Title="{x:Static Member=cultureStrings:strings.title}" Height="430" Width="450"
+		Closing="Window_Closing"
+		
+		Background="{DynamicResource MaterialDesignPaper}"
+		TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+		TextElement.FontWeight="Medium"
+		TextElement.FontSize="14"
+		FontFamily="pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto">
+
+    <!--<md:Card HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="{DynamicResource MaterialDesignPaper}">-->
+    <md:DialogHost x:Name="DialogHost">
+        <Grid x:Name="Grid">
+            <!--CATEGORY: Logo(s)-->
+            <StackPanel Orientation="Horizontal" Margin="5,0,15,5"
+						HorizontalAlignment="Right" VerticalAlignment="Top">
+                <Image Width="100" Margin="10" RenderOptions.BitmapScalingMode="HighQuality"
+					   Source="Resources/mrousavy.png" Cursor="Hand" MouseDown="Image_OpenGitHub"/>
+                <Image Width="30" Margin="10" RenderOptions.BitmapScalingMode="HighQuality"
+					   Source="Resources/Logo.png" Cursor="Hand" MouseDown="Image_OpenRepository"/>
+            </StackPanel>
+
+            <dragablz:TabablzControl Margin="0,0,0,50" Name="TabControl"
+                                     FixedHeaderCount="5">
+                <TabItem Header="{x:Static Member=cultureStrings:strings.settingsHome}">
+                    <Frame Source="/PipeShot.UI;component/Pages/SettingsPages/HomePage.xaml" />
+                </TabItem>
+                <TabItem Header="{x:Static Member=cultureStrings:strings.settingsCapture}">
+                    <Frame Source="/PipeShot.UI;component/Pages/SettingsPages/CapturePage.xaml" />
+                </TabItem>
+                <TabItem Header="{x:Static Member=cultureStrings:strings.settingsEvents}">
+                    <Frame Source="/PipeShot.UI;component/Pages/SettingsPages/EventsPage.xaml" />
+                </TabItem>
+                <TabItem Header="{x:Static Member=cultureStrings:strings.settingsImgur}">
+                    <Frame Source="/PipeShot.UI;component/Pages/SettingsPages/ImgurPage.xaml" />
+                </TabItem>
+                <TabItem Header="{x:Static Member=cultureStrings:strings.settingsOther}">
+                    <Frame Source="/PipeShot.UI;component/Pages/SettingsPages/OtherPage.xaml" />
+                </TabItem>
+            </dragablz:TabablzControl>
+
+
+            <md:Transitioner SelectedIndex="0">
+                <md:TransitionerSlide OpeningEffect="{md:TransitionEffect SlideInFromBottom}">
+                    <Grid VerticalAlignment="Bottom" Margin="10,0,5,3">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Grid Grid.Column="0" VerticalAlignment="Center" Name="ProgressIndicator">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+
+                            <ProgressBar Grid.Column="0" x:Name="ProgressBar" IsIndeterminate="True"
+                        Style="{StaticResource MaterialDesignCircularProgressBar}" Value="35"
+                        VerticalAlignment="Center" HorizontalAlignment="Center"
+                        Margin="5" ValueChanged="ProgressBar_ValueChanged"/>
+
+                            <TextBlock Grid.Column="1" x:Name="LoadingDesc" Foreground="Gray" 
+                VerticalAlignment="Center" Text="Test" TextWrapping="Wrap"/>
+
+                        </Grid>
+
+                        <Grid Grid.Column="1">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Button Grid.Column="0" Margin="5" Click="Save" x:Name="BtnSave" IsEnabled="False"
+                                    Content="{x:Static Member=cultureStrings:strings.apply}" />
+                        </Grid>
+                    </Grid>
+                </md:TransitionerSlide>
+            </md:Transitioner>
+
+
+            <!--CATEGORY: Toasts-->
+            <toasty:Toasty x:Name="SuccessToast"
+						   Height="30"
+						   VerticalAlignment="Bottom"
+						   Duration="0:0:0:2.5"
+						   Message="Somehow the Message is missing?"
+						   FontFamily="Segoe UI"
+						   FontWeight="Bold"
+						   MessageColor="White"
+						   Background="#2196F3"
+						   FontSize="13" />
+
+            <toasty:Toasty x:Name="ErrorToast"
+						   Height="30"
+						   VerticalAlignment="Bottom"
+						   Duration="0:0:0:2.7"
+						   Message="Whoops! Something went wrong!"
+						   FontFamily="Segoe UI"
+						   FontWeight="Bold"
+						   MessageColor="White"
+						   Background="#F44336"
+						   FontSize="13" />
+        </Grid>
+    </md:DialogHost>
+    <!--</md:Card>-->
+</Window>

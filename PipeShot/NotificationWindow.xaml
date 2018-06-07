@@ -1,0 +1,55 @@
+﻿<Window x:Class="PipeShot.NotificationWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:md="clr-namespace:MaterialDesignThemes.Wpf;assembly=MaterialDesignThemes.Wpf"
+        mc:Ignorable="d" Title="PipeShot Notification"
+
+        WindowStyle="None" Background="Transparent" ResizeMode="NoResize" AllowsTransparency="True"
+        WindowStartupLocation="Manual" Opacity="1" Topmost="True" ShowActivated="False" ShowInTaskbar="False"
+
+        Height="70" Width="220" Loaded="Window_Loaded" MouseEnter="Window_MouseEnter" MouseLeave="Window_MouseLeave">
+
+
+	<Border Background="#F21E1E1E" Margin="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" CornerRadius="1">
+		<Border.Effect>
+			<DropShadowEffect BlurRadius="3" Direction="-90" RenderingBias="Quality" ShadowDepth="1" Color="Gray" Opacity="0.2" />
+		</Border.Effect>
+		<Grid>
+			<Grid.RowDefinitions>
+				<RowDefinition/>
+				<RowDefinition Height="0*"/>
+			</Grid.RowDefinitions>
+			<!--Notification Content-->
+			<StackPanel Orientation="Horizontal" Margin="5,5,5,4.939"
+                            Name="NotificationContent" VerticalAlignment="Center" Height="58">
+
+				<Grid Margin="10,10,5,10" Height="25" Width="25">
+					<ProgressBar x:Name="ProgressBar" IsIndeterminate="True"
+                                    Style="{StaticResource MaterialDesignCircularProgressBar}" Value="35"
+                                    VerticalAlignment="Center" Visibility="Collapsed" />
+					<md:PackIcon x:Name="SuccessIcon" Kind="CheckCircle" Foreground="#2196F3" Height="25"
+                                    Width="25" Visibility="Collapsed" />
+					<md:PackIcon x:Name="ErrorIcon" Kind="CloseCircle" Foreground="#F44336" Height="25" Width="25"
+                                    Visibility="Collapsed" />
+				</Grid>
+				<StackPanel Width="162" Margin="5" VerticalAlignment="Center">
+					<TextBlock Foreground="#FFAAAAAA" x:Name="ContentLabel"
+							 FontSize="13" x:FieldModifier="public" TextWrapping="Wrap" HorizontalAlignment="Left">
+						Test
+					</TextBlock>
+				</StackPanel>
+			</StackPanel>
+
+
+			<!--Close "Button"-->
+			<Border CornerRadius="10" Height="12" Width="12" Margin="0,5,5,0" VerticalAlignment="Top"
+                    HorizontalAlignment="Right" Background="#FD5E4E" MouseDown="Window_Close" Cursor="Hand"
+                    x:Name="BtnClose" Opacity="0" MouseEnter="Close_MouseEnter" MouseLeave="Close_MouseLeave">
+				<md:PackIcon Kind="WindowClose" Width="10" Height="10" VerticalAlignment="Center"
+                             HorizontalAlignment="Center" Foreground="#222222" x:Name="CloseIcon" Opacity="0" />
+			</Border>
+		</Grid>
+	</Border>
+</Window>

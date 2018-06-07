@@ -1,27 +1,27 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/mrousavy/ImgurSniper/master/ImgurSniper.UI/Resources/Logo.png" height="120" />
+  <img src="https://raw.githubusercontent.com/piperift/Pipeshot/master/ImgurSniper.UI/Resources/Logo.png" height="120" />
   <h3 align="center">ImgurSniper</h3>
   <p align="center">The faster screenshot tool</p>
   <p align="center">
-    <a href="https://github.com/mrousavy/ImgurSniper/blob/master/Downloads/ImgurSniperSetup.zip?raw=true"><img src="https://img.shields.io/badge/Download-Setup-brightgreen.svg" alt="Download"></a>
-    <a href="https://github.com/mrousavy/ImgurSniper/releases"><img src="https://img.shields.io/github/downloads/mrousavy/ImgurSniper/total.svg" alt="Total downloads"></a>
+    <a href="https://github.com/piperift/Pipeshot/blob/master/Downloads/ImgurSniperSetup.zip?raw=true"><img src="https://img.shields.io/badge/Download-Setup-brightgreen.svg" alt="Download"></a>
+    <a href="https://github.com/piperift/Pipeshot/releases"><img src="https://img.shields.io/github/downloads/piperift/Pipeshot/total.svg" alt="Total downloads"></a>
   </p>
 </p>
 
 **ImgurSniper** is a small and lightweight tool that is designed to make **sharing Images** way **easier and faster** by instantly uploading them to [imgur](http://www.imgur.com) or copying to your clipboard!
 
 # Links
-<a href="https://github.com/mrousavy/ImgurSniper/blob/master/Downloads/ImgurSniperSetup.zip?raw=true"><img src="https://img.shields.io/badge/Download-Setup-brightgreen.svg" alt="Download Installer"></a>
+<a href="https://github.com/piperift/Pipeshot/blob/master/Downloads/ImgurSniperSetup.zip?raw=true"><img src="https://img.shields.io/badge/Download-Setup-brightgreen.svg" alt="Download Installer"></a>
 
-<a href="https://github.com/mrousavy/ImgurSniper/blob/master/Downloads/ImgurSniper.zip?raw=true"><img src="https://img.shields.io/badge/Download-Portable-brightgreen.svg" alt="Download Portable"></a>
+<a href="https://github.com/piperift/Pipeshot/blob/master/Downloads/ImgurSniper.zip?raw=true"><img src="https://img.shields.io/badge/Download-Portable-brightgreen.svg" alt="Download Portable"></a>
 
-<a href="https://github.com/mrousavy/PostShot"><img src="https://img.shields.io/badge/Try-PostShot-orange.svg" alt="PostShot"></a>
+<a href="https://github.com/piperift/PostShot"><img src="https://img.shields.io/badge/Try-PostShot-orange.svg" alt="PostShot"></a>
 
 <a href="https://saythanks.io/to/mrousavy"><img src="https://img.shields.io/badge/Say-Thanks-ff69b4.svg" alt="Say Thanks"></a>
 
 <a href='https://ko-fi.com/F1F8CLXG' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://az743702.vo.msecnd.net/cdn/kofi2.png?v=0' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
 
-#### [View all Releases](https://github.com/mrousavy/ImgurSniper/releases)
+#### [View all Releases](https://github.com/piperift/Pipeshot/releases)
 
 Icon by [jinga](http://github.com/jingafreak), Idea & German translations by [dmaniak](http://github.com/dmaniak)
 
@@ -40,7 +40,7 @@ You can now **share the Link** that has been **copied to your Clipboard** with e
 (See more Info at **ImgurSniper Settings -> Help**)
 
 <p align="center">
-<img src="https://raw.githubusercontent.com/mrousavy/ImgurSniper/master/ImgurSniper.UI/Resources/SnipeDemo.gif">
+<img src="https://raw.githubusercontent.com/piperift/Pipeshot/master/ImgurSniper.UI/Resources/SnipeDemo.gif">
 </p>
 
 # Features

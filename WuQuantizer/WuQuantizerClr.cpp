@@ -1,11 +1,9 @@
 #include "Quantizer.h"
-using namespace System;
 
-namespace WuQuantizer {
-	public ref class WuQuantizerClr {
-	public:
+/*namespace WuQuantizer {
+	class WuQuantizerClr {
 		static long Vol(box cube, long[][][] mmt) {
 
 		}
 	};
-}
+}*/
