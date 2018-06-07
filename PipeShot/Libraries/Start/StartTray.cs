@@ -122,11 +122,13 @@ namespace PipeShot.Libraries.Start {
         private static void OpenFromShortcutImg(HotKey obj = null) {
             if (ConfigHelper.FreezeScreen) {
                 using (ScreenshotWindowFreeze window = new ScreenshotWindowFreeze()) {
+					window.ShowActivated = false;
                     window.ShowDialog();
                 }
             } else {
                 using (ScreenshotWindow window = new ScreenshotWindow()) {
-                    window.ShowDialog();
+					window.ShowActivated = false;
+					window.ShowDialog();
                 }
             }
         }
